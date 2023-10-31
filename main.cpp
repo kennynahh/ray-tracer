@@ -12,7 +12,7 @@ int main() {
 
     std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
     std::cout << "# The P3 means colors are in ASCII, then 3 columns and 2 rows,\n"
-                 "# then 255 for max color, then RGB triplets\n"
+                 "# then 255 for max color, then RGB triplets\n";
 
     for (int j = 0; j < image_height; ++j) {
         for (int i = 0; i < image_width; ++i) {
