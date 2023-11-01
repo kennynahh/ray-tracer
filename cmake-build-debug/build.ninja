@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_ray_tracer: phony || CMakeFiles/ray_trac
 
 build CMakeFiles/ray_tracer.dir/main.cpp.o: CXX_COMPILER__ray_tracer_unscanned_Debug /Users/yul/Library/CloudStorage/OneDrive-UniversityofWaterloo/SYDE$ 1A/SYDE$ 121/CLionProjects/ray-tracer/main.cpp || cmake_object_order_depends_target_ray_tracer
   DEP_FILE = CMakeFiles/ray_tracer.dir/main.cpp.o.d
-  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
+  FLAGS = -g -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/ray_tracer.dir
   OBJECT_FILE_DIR = CMakeFiles/ray_tracer.dir
   TARGET_COMPILE_PDB = CMakeFiles/ray_tracer.dir/
@@ -66,7 +66,7 @@ build CMakeFiles/ray_tracer.dir/main.cpp.o: CXX_COMPILER__ray_tracer_unscanned_D
 # Link the executable ray_tracer
 
 build ray_tracer: CXX_EXECUTABLE_LINKER__ray_tracer_Debug CMakeFiles/ray_tracer.dir/main.cpp.o
-  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
   OBJECT_DIR = CMakeFiles/ray_tracer.dir
   POST_BUILD = :
   PRE_LINK = :
