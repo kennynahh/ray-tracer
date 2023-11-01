@@ -1,32 +1,31 @@
 //
 // Created by Kenny Na on 2023-10-25.
 //
+#include "color.h"
+#include "vec3.h"
+
 #include <iostream>
 
 int main() {
-    // RESOLUTION
+
+    // Image
+
     int image_width = 256;
     int image_height = 256;
 
-    // IMAGE FILE GENERATION
+    // Render
 
     std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
-    std::cout << "# The P3 means colors are in ASCII, then 3 columns and 2 rows,\n"
-                 "# then 255 for max color, then RGB triplets\n";
 
     for (int j = 0; j < image_height; ++j) {
+        std::clog << "\rScanlines remaining: " << (image_height - j) << ' ' << std::flush;
         for (int i = 0; i < image_width; ++i) {
-            auto r = double(i) / (image_width-1);
-            auto g = double(j) / (image_height-1);
-            auto b = 0;
-
-            int ir = static_cast<int>(255.999 * r);
-            int ig = static_cast<int>(255.999 * g);
-            int ib = static_cast<int>(255.999 * b);
-
-            std::cout << ir << ' ' << ig << ' ' << ib << '\n';
+            auto pixel_color = color(double(i)/(image_width-1), double(j)/(image_height-1), 0);
+            write_color(std::cout, pixel_color);
         }
     }
+
+    std::clog << "\rDone.                 \n";
 }
 
 //There are some things to note in this code:
@@ -40,3 +39,5 @@ int main() {
 // and green goes from fully off at the top to black at the bottom.
 // Adding red and green light together make yellow,
 // so we should expect the bottom right corner to be yellow.
+
+//executable_path > image.ppm
